@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoNew - Gaming, Hardware & Software</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #00ffcc;
+            --secondary-color: #ff00ff;
+            --background-color: #0a0a0a;
+            --text-color: #f0f0f0;
+            --dark-grey: #1a1a1a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            background: var(--dark-grey);
+            border-bottom: 2px solid var(--primary-color);
+            box-shadow: 0 0 15px var(--primary-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            text-shadow:
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px var(--primary-color),
+                0 0 30px var(--primary-color),
+                0 0 40px var(--primary-color),
+                0 0 55px var(--primary-color),
+                0 0 75px var(--primary-color);
+            animation: flicker 1.5s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                text-shadow:
+                    0 0 4px #fff,
+                    0 0 11px #fff,
+                    0 0 19px #fff,
+                    0 0 40px var(--primary-color),
+                    0 0 80px var(--primary-color),
+                    0 0 90px var(--primary-color),
+                    0 0 100px var(--primary-color),
+                    0 0 150px var(--primary-color);
+            }
+            20%, 24%, 55% {
+                text-shadow: none;
+            }
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+            text-shadow: 0 0 10px var(--primary-color);
+        }
+
+        .hero {
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.9)), url('https://images.unsplash.com/photo-1555680202-c86f0e12f086?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(to top, var(--background-color), transparent);
+        }
+
+        .hero-content h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            text-shadow: 0 0 15px var(--secondary-color);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            text-shadow: 0 0 10px var(--primary-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--dark-grey);
+            border: 1px solid #222;
+            border-radius: 10px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 5px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 20px var(--secondary-color);
+        }
+
+        .card h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .card p {
+            flex-grow: 1;
+        }
+
+        .card a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            display: inline-block;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: var(--dark-grey);
+            color: #aaa;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-top: 2px solid #222;
+        }
+        
+        .burger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-color);
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                right: 0px;
+                height: 100vh;
+                top: 0;
+                background-color: var(--dark-grey);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 60%;
+                transform: translateX(100%);
+                transition: transform 0.5s ease-in;
+            }
+
+            .nav-links li {
+                opacity: 0;
+                margin: 25px 0;
+            }
+
+            .burger {
+                display: block;
+                z-index: 1001;
+            }
+            
+            .burger.toggle .line1 {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+            .burger.toggle .line2 {
+                opacity: 0;
+            }
+            .burger.toggle .line3 {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+
+            .nav-active {
+                transform: translateX(0%);
+            }
+            
+            @keyframes navLinkFade {
+                from {
+                    opacity: 0;
+                    transform: translateX(50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0px);
+                }
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <div class="logo">DoNew</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#gaming">Gaming</a></li>
+                    <li><a href="#hardware">Hardware</a></li>
+                    <li><a href="#software">Software</a></li>
+                </ul>
+            </nav>
+             <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to the Next Level.</h1>
+                <p>Your ultimate hub for unfiltered gaming, hardware, and software analysis. We cut through the noise to bring you content that matters.</p>
+            </div>
+        </section>
+
+        <section id="gaming" class="section">
+            <div class="container">
+                <h2 class="section-title">Gaming</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Review: Cybernetic Dawn</h3>
+                        <p>Is the most anticipated RPG of the year a masterpiece or a digital ghost? We've spent 100+ hours in the neon-drenched world to give you the definitive verdict on its gameplay, story, and performance.</p>
+                        <a href="#">Read Full Review &rarr;</a>
+                    </div>
+                    <div class="card">
+                        <h3>Pro-Level Gaming Guides</h3>
+                        <p>Stop guessing and start winning. Our detailed guides cover everything from character builds in 'Ethernal Saga' to advanced recoil control patterns in 'Vanguard Strike'. Master the meta with us.</p>
+                        <a href="#">Browse All Guides &rarr;</a>
+                    </div>
+                    <div class="card">
+                        <h3>Live Stream Schedule</h3>
+                        <p>Catch the action live! Join our community for weekly streams. This week: 'Cybernetic Dawn' hardcore playthrough on Wednesday and 'Vanguard Strike' community night on Friday. Don't miss out!</p>
+                        <a href="#">Follow on Twitch &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hardware" class="section" style="background-color: var(--dark-grey);">
+            <div class="container">
+                <h2 class="section-title">Hardware</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Build: The 'Neon Beast'</h3>
+                        <p>Our latest featured PC build packs a GeForce RTX 5080 and an Intel Core i9-15900K into a stunning chassis with custom liquid cooling. See the full component list, benchmarks, and build process.</p>
+                        <a href="#">View Build Details &rarr;</a>
+                    </div>
+                    <div class="card">
+                        <h3>Review: 'Quantum' GPU Series</h3>
+                        <p>The new 'Quantum' GPU line promises a 40% performance leap. We put the flagship model to the test with 4K gaming, ray tracing, and content creation benchmarks. Is it worth the upgrade?</p>
+                        <a href="#">See Benchmarks &rarr;</a>
+                    </div>
+                    <div class="card">
+                        <h3>Market Watch: RAM Prices</h3>
+                        <p>DDR5 prices are finally stabilizing. We analyze the current market trends and recommend the best value-for-money kits for your next build, whether you're on a budget or aiming for peak performance.</p>
+                        <a href="#">Read Tech News &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="software" class="section">
+            <div class="container">
+                <h2 class="section-title">Software</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Essential Gamer's Toolkit</h3>
+                        <p>Optimize your experience with the best free software. We cover essential tools for streaming (OBS), communication (Discord), performance monitoring (MSI Afterburner), and system cleanup.</p>
+                        <a href="#">Get the Toolkit &rarr;</a>
+                    </div>
+                    <div class="card">
+                        <h3>Pro Tip: GPU Undervolting</h3>
+                        <p>Unlock hidden performance and reduce temperatures by undervolting your GPU. Our step-by-step guide makes it safe and easy, giving you a cooler, quieter, and often faster gaming rig for free.</p>
+                        <a href="#">Learn How &rarr;</a>
+                    </div>
+                     <div class="card">
+                        <h3>Security Alert: Driver Scams</h3>
+                        <p>A new wave of phishing scams is targeting gamers through fake driver update websites. We show you how to identify these threats and ensure you only download official, secure software for your hardware.</p>
+                        <a href="#">Stay Protected &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 DoNew & Tiwut. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('.nav-links li');
+
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+                burger.classList.toggle('toggle');
+
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = '';
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                    }
+                });
+            });
+        }
+
+        navSlide();
+    </script>
+</body>
+</html>
