@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { name: "Twitter", url: "https://twitter.com/IhrAccount", iconClass: "fab fa-twitter" },
     { name: "Instagram", url: "https://www.instagram.com/IhrAccount", iconClass: "fab fa-instagram" },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/IhrProfil", iconClass: "fab fa-linkedin-in" }
+    { name: "YouTube", url: "https://www.youtube.com/in/IhrProfil", iconClass: "fab fa-youtube" }
   ];
 
   const footer = document.querySelector("footer");
