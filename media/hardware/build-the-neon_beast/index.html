@@ -1,278 +1,272 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The 'Neon Beast' - Ein Showcase PC-Build</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 'Neon Beast' - A Showcase PC Build</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #1a1a1d;
-            color: #c5c6c7;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
+body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #1a1a1d;
+        color: #c5c6c7;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
 
-        .header {
-            text-align: center;
-            padding: 4rem 0;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1598928506311-c55ded91a20c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80') no-repeat center center/cover;
-            border-bottom: 5px solid #66fcf1;
-        }
+    .header {
+        text-align: center;
+        padding: 4rem 0;
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1598928506311-c55ded91a20c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80') no-repeat center center/cover;
+        border-bottom: 5px solid #66fcf1;
+    }
 
-        .header h1 {
-            font-size: 4rem;
-            color: #66fcf1;
-            margin: 0;
-            text-shadow: 2px 2px 10px #45a29e;
-        }
+    .header h1 {
+        font-size: 4rem;
+        color: #66fcf1;
+        margin: 0;
+        text-shadow: 2px 2px 10px #45a29e;
+    }
 
-        .header p {
-            font-size: 1.2rem;
-            color: #c5c6c7;
-        }
+    .header p {
+        font-size: 1.2rem;
+        color: #c5c6c7;
+    }
 
-        .section {
-            background-color: #1f2833;
-            margin-bottom: 2rem;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.4);
-        }
+    .section {
+        background-color: #1f2833;
+        margin-bottom: 2rem;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
 
-        .section h2 {
-            font-size: 2.5rem;
-            color: #66fcf1;
-            border-bottom: 2px solid #45a29e;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
+    .section h2 {
+        font-size: 2.5rem;
+        color: #66fcf1;
+        border-bottom: 2px solid #45a29e;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
 
-        .component-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
+    .component-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
 
-        .component-item {
-            background-color: #0b0c10;
-            padding: 1.5rem;
-            border-radius: 5px;
-            border-left: 5px solid #45a29e;
-        }
+    .component-item {
+        background-color: #0b0c10;
+        padding: 1.5rem;
+        border-radius: 5px;
+        border-left: 5px solid #45a29e;
+    }
 
-        .component-item h3 {
-            font-size: 1.5rem;
-            color: #66fcf1;
-            margin-top: 0;
-        }
+    .component-item h3 {
+        font-size: 1.5rem;
+        color: #66fcf1;
+        margin-top: 0;
+    }
 
-        .component-item p {
-            color: #c5c6c7;
-            margin-bottom: 0;
-        }
+    .component-item p {
+        color: #c5c6c7;
+        margin-bottom: 0;
+    }
 
-        .benchmarks table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1.5rem;
-        }
+    .benchmarks table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1.5rem;
+    }
 
-        .benchmarks th, .benchmarks td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid #45a29e;
-        }
+    .benchmarks th, .benchmarks td {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid #45a29e;
+    }
 
-        .benchmarks th {
-            background-color: #45a29e;
-            color: #0b0c10;
-        }
+    .benchmarks th {
+        background-color: #45a29e;
+        color: #0b0c10;
+    }
 
-        .benchmarks tr:nth-child(even) {
-            background-color: #1f2833;
-        }
+    .benchmarks tr:nth-child(even) {
+        background-color: #1f2833;
+    }
 
-        .benchmarks tr:hover {
-            background-color: #45a29e;
-            color: #0b0c10;
-        }
-        
-        .build-process .step {
-            margin-bottom: 2rem;
-        }
+    .benchmarks tr:hover {
+        background-color: #45a29e;
+        color: #0b0c10;
+    }
+    
+    .build-process .step {
+        margin-bottom: 2rem;
+    }
 
-        .build-process h3 {
-            font-size: 1.8rem;
-            color: #66fcf1;
-            margin-bottom: 1rem;
-        }
+    .build-process h3 {
+        font-size: 1.8rem;
+        color: #66fcf1;
+        margin-bottom: 1rem;
+    }
 
-        .build-process p {
-            color: #c5c6c7;
-        }
-        
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-        }
+    .build-process p {
+        color: #c5c6c7;
+    }
+    
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+    }
 
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-            border: 3px solid #45a29e;
-        }
+    .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        border: 3px solid #45a29e;
+    }
 
-        .footer {
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 2rem;
-            background-color: #0b0c10;
-            color: #c5c6c7;
-        }
-    </style>
+    .footer {
+        text-align: center;
+        padding: 2rem 0;
+        margin-top: 2rem;
+        background-color: #0b0c10;
+        color: #c5c6c7;
+    }
+</style>
 </head>
 <body>
-
 <header class="header">
-    <h1>The 'Neon Beast'</h1>
-    <p>Ein tiefer Einblick in einen futuristischen, leistungsstarken PC-Build.</p>
+<h1>The 'Neon Beast'</h1>
+<p>A deep dive into a futuristic, high-performance PC build.</p>
 </header>
-
 <div class="container">
-    <section class="section">
-        <h2>Einleitung</h2>
-        <p>Willkommen zum offiziellen Showcase des 'Neon Beast'. Dieses Projekt entstand aus dem Wunsch, die Grenzen von Leistung und Ästhetik in der Welt des Custom-PC-Baus zu erweitern. Durch die Kombination der rohen Kraft von Komponenten der nächsten Generation mit einem sorgfältig gefertigten, benutzerdefinierten Flüssigkeitskühlkreislauf ist das 'Neon Beast' ein Beweis dafür, was möglich ist, wenn Spitzentechnologie auf künstlerisches Design trifft. Jede Komponente wurde handverlesen und jedes Kabel sorgfältig verlegt, um einen sauberen, futuristischen Look zu schaffen, der seine monströse Leistung ergänzt.</p>
-    </section>
-
-    <section class="section">
-        <h2>Vollständige Komponentenliste</h2>
-        <div class="component-list">
-            <div class="component-item">
-                <h3>Grafikkarte</h3>
-                <p><strong>NVIDIA GeForce RTX 5080:</strong> Basierend auf der "Blackwell"-Architektur ist diese GPU ein Kraftpaket für 4K- und sogar 8K-Gaming. Mit 16 GB GDDR7-Speicher und RT- und Tensor-Kernen der nächsten Generation liefert sie eine beispiellose Raytracing-Leistung und KI-gestützte Funktionen wie DLSS 4.</p>
-            </div>
-            <div class="component-item">
-                <h3>Prozessor</h3>
-                <p><strong>Intel Core i9-15900K:</strong> Als Teil der "Arrow Lake"-Familie verfügt diese CPU über eine neue Hybridarchitektur mit 8 Performance-Kernen und 16 Effizienz-Kernen für insgesamt 24 Kerne und 24 Threads. Sie bietet eine außergewöhnliche Single- und Multi-Threaded-Leistung und ist somit ideal für Gaming und anspruchsvolle kreative Workloads.</p>
-            </div>
-            <div class="component-item">
-                <h3>Motherboard</h3>
-                <p><strong>ASUS ROG Maximus Z890 Hero:</strong> Ein Flaggschiff-Motherboard mit robuster Stromversorgung, umfangreichen Anschlussmöglichkeiten einschließlich PCIe 5.0 und Wi-Fi 7 sowie einem eleganten, anpassbaren Design.</p>
-            </div>
-            <div class="component-item">
-                <h3>Arbeitsspeicher</h3>
-                <p><strong>Corsair Dominator Titanium 64GB (2x32GB) DDR5 8000MHz:</strong> Hochgeschwindigkeits-RAM mit niedriger Latenz, der sicherstellt, dass der Core i9-15900K sein volles Potenzial entfaltet, mit beeindruckender anpassbarer RGB-Beleuchtung.</p>
-            </div>
-            <div class="component-item">
-                <h3>Speicher</h3>
-                <p><strong>Samsung 990 Pro 4TB NVMe PCIe 5.0 SSD:</strong> Blitzschneller Speicher für Betriebssystem, Anwendungen und Spiele, der Ladezeiten praktisch eliminiert.</p>
-            </div>
-            <div class="component-item">
-                <h3>Netzteil</h3>
-                <p><strong>Seasonic PRIME TX-1300, 1300W 80+ Titanium:</strong> Ein hocheffizientes und vollmodulares Netzteil, das alle Komponenten mit sauberer, stabiler Energie versorgt.</p>
-            </div>
-            <div class="component-item">
-                <h3>Gehäuse</h3>
-                <p><strong>Lian Li O11 Dynamic EVO XL:</strong> Ein atemberaubendes, geräumiges Gehäuse mit Hartglas-Paneelen an der Vorder- und Seite, das einen Panoramablick auf die internen Komponenten und den benutzerdefinierten Flüssigkeitskühlkreislauf bietet.</p>
-            </div>
-            <div class="component-item">
-                <h3>Benutzerdefinierte Flüssigkeitskühlung</h3>
-                <p>Ein vollständiger Custom-Loop von EKWB, bestehend aus einem CPU- und GPU-Wasserkühler, zwei 360-mm-Radiatoren und Hardline-Schläuchen mit einer leuchtend neongrünen Kühlflüssigkeit, die zum 'Neon Beast'-Thema passt.</p>
-            </div>
+<section class="section">
+<h2>Introduction</h2>
+<p>Welcome to the official showcase of the 'Neon Beast'. This project was born from a desire to push the boundaries of performance and aesthetics in the world of custom PC building. By combining the raw power of next-generation components with a meticulously crafted custom liquid cooling loop, the 'Neon Beast' is a testament to what's possible when cutting-edge technology meets artistic design. Every component was hand-picked and every cable carefully managed to create a clean, futuristic look that complements its monstrous performance.</p>
+</section>
+<section class="section">
+    <h2>Full Component List</h2>
+    <div class="component-list">
+        <div class="component-item">
+            <h3>Graphics Card</h3>
+            <p><strong>NVIDIA GeForce RTX 5080:</strong> Based on the "Blackwell" architecture, this GPU is a powerhouse for 4K and even 8K gaming. With 16GB of GDDR7 memory and next-gen RT and Tensor cores, it delivers unparalleled ray tracing performance and AI-powered features like DLSS 4.</p>
         </div>
-    </section>
-
-    <section class="section">
-        <h2>Leistungs-Benchmarks</h2>
-        <p>Das 'Neon Beast' wurde in einer Vielzahl von synthetischen Benchmarks und modernen AAA-Spielen bei 4K-Auflösung mit maximalen Einstellungen auf die Probe gestellt. Die Ergebnisse sprechen für sich.</p>
-        <div class="benchmarks">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Spiel / Benchmark</th>
-                        <th>Auflösung</th>
-                        <th>Einstellungen</th>
-                        <th>Durchschnittliche FPS</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Cyberpunk 2077</td>
-                        <td>3840x2160 (4K)</td>
-                        <td>Ultra, Ray Tracing: Overdrive</td>
-                        <td>110 FPS (DLSS 4 Performance)</td>
-                    </tr>
-                    <tr>
-                        <td>Alan Wake 2</td>
-                        <td>3840x2160 (4K)</td>
-                        <td>High, Path Tracing</td>
-                        <td>95 FPS (DLSS 4 Performance)</td>
-                    </tr>
-                    <tr>
-                        <td>Starfield</td>
-                        <td>3840x2160 (4K)</td>
-                        <td>Ultra</td>
-                        <td>145 FPS</td>
-                    </tr>
-                    <tr>
-                        <td>3DMark Port Royal (Ray Tracing)</td>
-                        <td colspan="2">N/A</td>
-                        <td>25,500</td>
-                    </tr>
-                    <tr>
-                        <td>Cinebench R23 (Multi-Core)</td>
-                        <td colspan="2">N/A</td>
-                        <td>42,500</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="component-item">
+            <h3>Processor</h3>
+            <p><strong>Intel Core i9-15900K:</strong> Part of the "Arrow Lake" family, this CPU features a new hybrid architecture with 8 Performance-cores and 16 Efficiency-cores for a total of 24 cores and 24 threads. It offers exceptional single and multi-threaded performance, making it ideal for gaming and demanding creative workloads.</p>
         </div>
-    </section>
-    
-    <section class="section">
-        <h2>Der Bauprozess</h2>
-        <div class="build-process">
-            <div class="step">
-                <h3>1. Komponentenauswahl und Vorbereitung</h3>
-                <p>Das Herzstück des Builds, der Intel Core i9-15900K, wurde auf dem ASUS ROG Maximus Z890 Hero Motherboard platziert. Der Corsair Dominator Titanium DDR5 RAM und die Samsung 990 Pro SSD wurden installiert, um die Hauptplatinen-Baugruppe zu vervollständigen. Die GeForce RTX 5080 wurde für die Wasserkühlung vorbereitet, indem ihr werkseitiger Kühler sorgfältig entfernt und der EKWB Quantum Vector² Wasserkühler installiert wurde.</p>
-            </div>
-            <div class="step">
-                <h3>2. Gehäuse- und Kühlungsinstallation</h3>
-                <p>Das Motherboard wurde im geräumigen Lian Li O11 Dynamic EVO XL Gehäuse montiert. Die beiden 360-mm-Radiatoren wurden an der Ober- und Seite des Gehäuses installiert und mit Hochleistungslüftern für eine optimale Wärmeabfuhr bestückt. Anschließend begann der aufwändige Prozess des Biegens und Anbringens der Hardline-Schläuche für den benutzerdefinierten Flüssigkeitskühlkreislauf, der CPU, GPU, Radiatoren und Reservoir verbindet.</p>
-            </div>
-            <div class="step">
-                <h3>3. Verkabelung und letzte Handgriffe</h3>
-                <p>Nachdem die Hauptkomponenten und die Kühlung installiert waren, wurde das Seasonic PRIME TX-1300 Netzteil eingebaut. Ein sorgfältiges Kabelmanagement hatte oberste Priorität, um ein sauberes und optisch ansprechendes Inneres zu gewährleisten. Es wurden maßgeschneiderte gesleevte Kabel verwendet, die zum neongrünen und schwarzen Farbschema passen. Anschließend wurde das System mit der leuchtend neongrünen Kühlflüssigkeit befüllt und 24 Stunden lang auf Dichtheit geprüft.</p>
-            </div>
+        <div class="component-item">
+            <h3>Motherboard</h3>
+            <p><strong>ASUS ROG Maximus Z890 Hero:</strong> A flagship motherboard with robust power delivery, extensive connectivity including PCIe 5.0 and Wi-Fi 7, and a sleek, customizable design.</p>
         </div>
-    </section>
-
-    <section class="section">
-        <h2>Bildergalerie</h2>
-        <div class="gallery">
-             <img src="https://images.unsplash.com/photo-1601524909162-0b174b5c714c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Neon Beast PC Build Bild 1">
-            <img src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Neon Beast PC Build Bild 2">
-            <img src="https://images.unsplash.com/photo-1593640408182-01c74c7d62dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" alt="Neon Beast PC Build Bild 3">
+        <div class="component-item">
+            <h3>Memory</h3>
+            <p><strong>Corsair Dominator Titanium 64GB (2x32GB) DDR5 8000MHz:</strong> High-speed, low-latency RAM that ensures the Core i9-15900K reaches its full potential, with stunning customizable RGB lighting.</p>
         </div>
-    </section>
+        <div class="component-item">
+            <h3>Storage</h3>
+            <p><strong>Samsung 990 Pro 4TB NVMe PCIe 5.0 SSD:</strong> Blazing-fast storage for the operating system, applications, and games, virtually eliminating loading times.</p>
+        </div>
+        <div class="component-item">
+            <h3>Power Supply</h3>
+            <p><strong>Seasonic PRIME TX-1300, 1300W 80+ Titanium:</strong> A highly efficient and fully modular power supply that provides clean, stable power to all components.</p>
+        </div>
+        <div class="component-item">
+            <h3>Case</h3>
+            <p><strong>Lian Li O11 Dynamic EVO XL:</strong> A stunning, spacious case with tempered glass panels on the front and side, offering a panoramic view of the internal components and custom liquid cooling loop.</p>
+        </div>
+        <div class="component-item">
+            <h3>Custom Liquid Cooling</h3>
+            <p>A full custom loop from EKWB, consisting of a CPU and GPU water block, two 360mm radiators, and hardline tubing with a vibrant neon green coolant to match the 'Neon Beast' theme.</p>
+        </div>
+    </div>
+</section>
 
+<section class="section">
+    <h2>Performance Benchmarks</h2>
+    <p>The 'Neon Beast' was put to the test in a variety of synthetic benchmarks and modern AAA games at 4K resolution with maximum settings. The results speak for themselves.</p>
+    <div class="benchmarks">
+        <table>
+            <thead>
+                <tr>
+                    <th>Game / Benchmark</th>
+                    <th>Resolution</th>
+                    <th>Settings</th>
+                    <th>Average FPS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cyberpunk 2077</td>
+                    <td>3840x2160 (4K)</td>
+                    <td>Ultra, Ray Tracing: Overdrive</td>
+                    <td>110 FPS (DLSS 4 Performance)</td>
+                </tr>
+                <tr>
+                    <td>Alan Wake 2</td>
+                    <td>3840x2160 (4K)</td>
+                    <td>High, Path Tracing</td>
+                    <td>95 FPS (DLSS 4 Performance)</td>
+                </tr>
+                <tr>
+                    <td>Starfield</td>
+                    <td>3840x2160 (4K)</td>
+                    <td>Ultra</td>
+                    <td>145 FPS</td>
+                </tr>
+                <tr>
+                    <td>3DMark Port Royal (Ray Tracing)</td>
+                    <td colspan="2">N/A</td>
+                    <td>25,500</td>
+                </tr>
+                <tr>
+                    <td>Cinebench R23 (Multi-Core)</td>
+                    <td colspan="2">N/A</td>
+                    <td>42,500</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="section">
+    <h2>The Build Process</h2>
+    <div class="build-process">
+        <div class="step">
+            <h3>1. Component Selection and Preparation</h3>
+            <p>The heart of the build, the Intel Core i9-15900K, was seated on the ASUS ROG Maximus Z890 Hero motherboard. The Corsair Dominator Titanium DDR5 RAM and Samsung 990 Pro SSD were installed to complete the mainboard assembly. The GeForce RTX 5080 was prepared for water cooling by carefully removing its stock cooler and installing the EKWB Quantum Vector² water block.</p>
+        </div>
+        <div class="step">
+            <h3>2. Case and Cooling Installation</h3>
+            <p>The motherboard was mounted in the spacious Lian Li O11 Dynamic EVO XL case. The two 360mm radiators were installed at the top and side of the case, equipped with high-performance fans for optimal heat dissipation. Then began the intricate process of bending and fitting the hardline tubing for the custom liquid cooling loop, connecting the CPU, GPU, radiators, and reservoir.</p>
+        </div>
+        <div class="step">
+            <h3>3. Cabling and Final Touches</h3>
+            <p>With the main components and cooling in place, the Seasonic PRIME TX-1300 power supply was installed. Meticulous cable management was a top priority to ensure a clean and visually appealing interior. Custom sleeved cables matching the neon green and black color scheme were used. The system was then filled with the vibrant neon green coolant and leak-tested for 24 hours.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Image Gallery</h2>
+    <div class="gallery">
+         <img src="https://images.unsplash.com/photo-1601524909162-0b174b5c714c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Neon Beast PC Build Image 1">
+        <img src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Neon Beast PC Build Image 2">
+        <img src="https://images.unsplash.com/photo-1593640408182-01c74c7d62dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" alt="Neon Beast PC Build Image 3">
+    </div>
+</section>
 </div>
-
 <footer class="footer">
-    <p>&copy; 2025 The 'Neon Beast' Project. Alle Rechte vorbehalten.</p>
+<p>&copy; 2025 The 'Neon Beast' Project. All rights reserved.</p>
 </footer>
-
 </body>
 </html>
