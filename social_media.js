@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", function() {
   // Definieren Sie hier Ihre Social-Media-Profile
   const socialMediaLinks = [
     { name: "Facebook", url: "https://www.facebook.com/IhreSeite", iconClass: "fab fa-facebook-f" },
-    { name: "X", url: "https://x.com/IhrAccount", iconClass: "fab fa-x" },
+    { name: "X", url: "https://x.com/IhrAccount", iconClass: "fab fa-x-twitter" },
     { name: "Instagram", url: "https://www.instagram.com/IhrAccount", iconClass: "fab fa-instagram" },
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/IhrProfil", iconClass: "fab fa-linkedin-in" }
-    { name: "YouTube", url: "https://www.youtube.com/in/IhrProfil", iconClass: "fab fa-youtube" }
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/IhrProfil", iconClass: "fab fa-linkedin-in" },
+    { name: "YouTube", url: "https://www.youtube.com/IhrKanal", iconClass: "fab fa-youtube" }
   ];
 
   const footer = document.querySelector("footer");
