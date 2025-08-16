@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { name: "X", url: "https://x.com/IhrAccount", iconClass: "fab fa-x" },
     { name: "Instagram", url: "https://www.instagram.com/IhrAccount", iconClass: "fab fa-instagram" },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/IhrProfil", iconClass: "fab fa-linkedin-in" }
+    { name: "YouTube", url: "https://www.youtube.com/in/IhrProfil", iconClass: "fab fa-youtube" }
     // Fügen Sie hier weitere Netzwerke hinzu
   ];
 
