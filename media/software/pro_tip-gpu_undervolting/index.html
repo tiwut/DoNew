@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate GPU Undervolting Guide</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            border-bottom: #0779e4 3px solid;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .main {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #0779e4;
+            border-bottom: 2px solid #f4f4f4;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #333;
+        }
+
+        .pro-tip {
+            background: #eef7ff;
+            border-left: 5px solid #0779e4;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .step-by-step li {
+            margin-bottom: 10px;
+        }
+
+        code {
+            background: #eee;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        .warning {
+            background: #fff3f3;
+            border-left: 5px solid #d9534f;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .benefits-list {
+            list-style-type: '✓';
+            padding-left: 20px;
+        }
+        
+        .benefits-list li {
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            color: #666;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Pro Tip: GPU Undervolting</h1>
+            <p>Unlock hidden performance and reduce temperatures</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main">
+            <section id="intro">
+                <h2>What is GPU Undervolting?</h2>
+                <p>GPU undervolting is the process of reducing the voltage supplied to your graphics card. [7] Graphics cards often receive more voltage from the power supply than they need to operate stably. [3] By carefully lowering the voltage, you can achieve a more efficient performance profile without sacrificing clock speeds. [4] This can lead to a cooler, quieter, and potentially even faster gaming experience.</p>
+            </section>
+
+            <section id="benefits">
+                <h2>The Advantages of Undervolting</h2>
+                <p>Undervolting your GPU can offer a range of benefits, making it a popular tweak for PC enthusiasts. Here's what you can expect:</p>
+                <ul class="benefits-list">
+                    <li><strong>Lower Temperatures:</strong> By reducing the voltage, your GPU generates less heat, which can lead to lower operating temperatures. [4] This not only improves the longevity of your hardware but can also prevent thermal throttling. [4]</li>
+                    <li><strong>Reduced Power Consumption:</strong> A lower voltage means your GPU draws less power from your power supply, making your gaming rig more energy-efficient. [3]</li>
+                    <li><strong>Quieter Operation:</strong> With lower temperatures, your GPU fans don't have to spin as fast to keep the card cool, resulting in a quieter gaming experience. [3, 7]</li>
+                    <li><strong>Improved Performance and Stability:</strong> In some cases, undervolting can lead to better performance. By reducing heat, your GPU may be able to maintain higher boost clock speeds for longer periods. [4]</li>
+                    <li><strong>Increased Lifespan:</strong> Lower temperatures and reduced power draw can contribute to a longer lifespan for your graphics card. [4, 7]</li>
+                </ul>
+            </section>
+
+            <div class="pro-tip">
+                <p><strong>Pro Tip:</strong> Undervolting is a safe way to get more out of your GPU. Unlike overclocking, which can sometimes pose risks to your hardware, undervolting is a gentler approach to performance optimization. The worst-case scenario is typically a system crash, which can be easily rectified by reverting to your previous settings. [6]</p>
+            </div>
+
+            <section id="how-to">
+                <h2>How to Undervolt Your GPU: A Step-by-Step Guide</h2>
+                <p>The process of undervolting varies slightly between NVIDIA and AMD graphics cards. Below are general guidelines for both.</p>
+
+                <h3>For NVIDIA GPUs (using MSI Afterburner)</h3>
+                <p>MSI Afterburner is a popular and effective tool for undervolting NVIDIA graphics cards. [1]</p>
+                <ol class="step-by-step">
+                    <li><strong>Download and Install Software:</strong> You'll need <a href="https://www.msi.com/Landing/afterburner" target="_blank">MSI Afterburner</a> and a benchmarking tool like <a href="https://benchmark.unigine.com/heaven" target="_blank">Unigine Heaven</a> or 3DMark to stress test your GPU. [15, 6]</li>
+                    <li><strong>Establish a Baseline:</strong> Run your chosen benchmark at stock settings and take note of your GPU's clock speed, voltage, temperature, and performance (e.g., FPS or benchmark score). [10]</li>
+                    <li><strong>Open the Curve Editor:</strong> In MSI Afterburner, press <code>Ctrl + F</code> to open the Voltage/Frequency curve editor. [1]</li>
+                    <li><strong>Adjust the Curve:</strong> The goal is to find the lowest stable voltage for your target clock speed. You can do this by lowering the voltage at a specific clock speed point on the curve. A common starting point is to reduce the voltage in small increments of 25-50mV. [10]</li>
+                    <li><strong>Apply and Test:</strong> Apply the new settings and run your benchmark for an extended period to test for stability. Look for any artifacts, crashes, or freezes. [1]</li>
+                    <li><strong>Fine-Tune:</strong> If your system is stable, you can try lowering the voltage further in small increments and re-testing. If it's unstable, increase the voltage slightly until you find a stable setting. [2]</li>
+                    <li><strong>Save Your Profile:</strong> Once you've found your ideal stable undervolt, save the settings to a profile in MSI Afterburner and set it to apply at startup. [10]</li>
+                </ol>
+
+                <h3>For AMD GPUs (using AMD Software: Adrenalin Edition)</h3>
+                <p>Undervolting an AMD graphics card can often be done directly through the AMD Radeon software. [1]</p>
+                <ol class="step-by-step">
+                    <li><strong>Open AMD Software:</strong> Right-click on your desktop and select "AMD Software: Adrenalin Edition." [1]</li>
+                    <li><strong>Navigate to Tuning:</strong> Go to the "Performance" tab and then click on "Tuning." [1]</li>
+                    <li><strong>Enable Manual Tuning:</strong> You can choose to use the automatic undervolting feature or select "Custom" for manual control. [12] For more precise results, manual tuning is recommended.</li>
+                    <li><strong>Adjust Voltage:</strong> In the manual tuning section, you can adjust the voltage. It's recommended to lower the voltage in small increments (e.g., 10mV) and then test for stability. [1]</li>
+                    <li><strong>Stress Test:</strong> Use a benchmarking tool or a demanding game to ensure your GPU is stable with the new voltage settings. [1]</li>
+                    <li><strong>Find the Sweet Spot:</strong> Continue to lower the voltage and test until you find the lowest stable voltage for your desired performance. If you experience crashes, revert to the last stable voltage. [1]</li>
+                </ol>
+            </section>
+            
+            <div class="warning">
+                <p><strong>Disclaimer:</strong> While generally safe, undervolting can cause system instability or crashes during the testing phase. [8] Always proceed with caution and make small adjustments at a time. The optimal settings will vary for every individual GPU due to the "silicon lottery." [15]</p>
+            </div>
+
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <h3>Is undervolting worth it?</h3>
+                <p>For many users, yes. The benefits of lower temperatures, reduced noise, and increased efficiency often outweigh the time it takes to find stable settings. [2, 4] In some instances, it can even lead to better-sustained performance. [4]</p>
+
+                <h3>Will undervolting void my warranty?</h3>
+                <p>Generally, no. Since you are not physically modifying the hardware and are using software to adjust settings, it is unlikely to void your warranty. However, it's always a good idea to check your manufacturer's warranty policy.</p>
+
+                <h3>Can undervolting damage my GPU?</h3>
+                <p>It is highly unlikely that undervolting will damage your GPU. [6] The primary risk is system instability, which can be resolved by reverting to default settings. [6] You are reducing the power to the card, not increasing it, which makes it a safer alternative to overclocking. [5]</p>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 DoNew & Tiwut. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
