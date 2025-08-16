@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
       anchor.href = link.url;
       anchor.target = "_blank"; // Öffnet den Link in einem neuen Tab
       anchor.rel = "noopener noreferrer";
-      anchor.setAttribute("aria-label", `Besuchen Sie uns auf ${link.name}`);
+      anchor.setAttribute("aria-label", `Visit us on ${link.name}`);
 
       const icon = document.createElement("i");
       icon.className = link.iconClass;
@@ -37,6 +37,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     footer.appendChild(socialList);
   } else {
-    console.error("Kein <footer>-Element auf der Seite gefunden.");
+    console.error(" No <footer> element found on the page.");
   }
 });
