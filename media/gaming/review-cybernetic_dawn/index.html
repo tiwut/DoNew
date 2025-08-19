@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybernetic Dawn - The Definitive Review</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;400;600&display=swap');
+
+        :root {
+            --primary-color: #0d0d2b;
+            --secondary-color: #1a1a4a;
+            --accent-color: #00ffff; /* Neon Cyan */
+            --highlight-color: #ff00ff; /* Neon Magenta */
+            --text-color: #e0e0e0;
+            --header-font: 'Orbitron', sans-serif;
+            --body-font: 'Rajdhani', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--body-font);
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Header & Hero Section --- */
+        .main-header {
+            background: url('https://images.unsplash.com/photo-1511556532299-8f662fc26c06?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+            border-bottom: 4px solid var(--accent-color);
+            position: relative;
+        }
+        
+        .main-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(13, 13, 43, 0.85);
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .header-content h1 {
+            font-family: var(--header-font);
+            font-size: 4rem;
+            color: #fff;
+            text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color);
+            margin-bottom: 10px;
+        }
+        
+        .header-content h1 .subtitle {
+             display: block;
+             font-size: 2rem;
+             font-weight: 400;
+             color: var(--accent-color);
+             text-shadow: 0 0 10px var(--highlight-color);
+        }
+
+        .header-content .tagline {
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* --- Main Content --- */
+        .review-section {
+            background-color: var(--secondary-color);
+            margin: 30px 0;
+            padding: 40px;
+            border-left: 5px solid var(--highlight-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-radius: 5px;
+        }
+
+        .review-section h2 {
+            font-family: var(--header-font);
+            color: var(--accent-color);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+            text-shadow: 0 0 5px var(--accent-color);
+        }
+
+        .review-section p {
+            margin-bottom: 1.2em;
+        }
+        
+        .review-section strong {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+        
+        .review-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .review-section ul li {
+            background: rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+            padding: 15px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .review-section ul li::before {
+            content: '»';
+            margin-right: 10px;
+            color: var(--highlight-color);
+            font-weight: bold;
+        }
+        
+        /* --- Verdict Section --- */
+        .verdict {
+            text-align: center;
+            padding: 50px;
+            background-color: var(--secondary-color);
+            border-top: 4px solid var(--accent-color);
+            border-bottom: 4px solid var(--highlight-color);
+        }
+
+        .verdict h2 {
+             font-family: var(--header-font);
+             font-size: 3rem;
+             color: #fff;
+             margin-bottom: 20px;
+        }
+        
+        .score {
+            font-size: 6rem;
+            font-family: var(--header-font);
+            color: var(--accent-color);
+            text-shadow: 0 0 15px var(--accent-color);
+            margin-bottom: 10px;
+        }
+        
+        .score-text {
+            font-size: 2rem;
+            color: var(--highlight-color);
+            font-family: var(--header-font);
+            margin-bottom: 20px;
+        }
+        
+        .summary {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: var(--highlight-color);
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <h1>
+                CYBERNETIC DAWN
+                <span class="subtitle">THE DEFINITIVE REVIEW</span>
+            </h1>
+            <p class="tagline">Is the most anticipated RPG of the year a masterpiece or a digital ghost? We've spent 100+ hours in the neon-drenched world to give you the definitive verdict on its gameplay, story, and performance.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="gameplay" class="review-section">
+            <h2>Gameplay: A Symphony of Chrome and Combat</h2>
+            <p><strong>Cybernetic Dawn doesn't just ask you to play; it plugs you directly into its core systems.</strong> The gameplay is a fluid, exhilarating dance between visceral first-person combat, deep RPG customization, and strategic hacking. Night City is not just a backdrop; it's a vertical playground. Traversal is a joy, whether you're double-jumping across rooftops with augmented legs or weaving through traffic on a sleek, futuristic motorcycle.</p>
+            <p>The combat mechanics are finely tuned. Gunplay feels punchy and responsive, while melee options—from thermal katanas to super-heated monowire—are devastatingly satisfying. Where the game truly shines, however, is in its cyberware system. Every limb, every organ, and even your nervous system can be augmented. You can install a Sandevistan module to slow down time, equip Mantis Blades for lethal close-quarters combat, or become a master 'Netrunner,' frying enemy synapses from the shadows without firing a single shot. This level of customization allows for truly diverse playstyles, ensuring no two playthroughs are the same.</p>
+            <ul>
+                <li><strong>Combat:</strong> A tight, responsive blend of shooting and melee, elevated by unique cybernetic abilities.</li>
+                <li><strong>Customization:</strong> An incredibly deep and meaningful cyberware and skill tree system that directly impacts how you approach every situation.</li>
+                <li><strong>Exploration:</strong> The multi-layered, neon-soaked world is dense with secrets, side-quests, and emergent stories.</li>
+                <li><strong>Hacking:</strong> The 'Netrunning' system is more than a mini-game; it's a viable and powerful playstyle for stealth and control.</li>
+            </ul>
+        </section>
+
+        <section id="story" class="review-section">
+            <h2>Story: A Ghost in the Machine</h2>
+            <p>At its heart, Cybernetic Dawn tells a deeply human story in a world that's losing its humanity. You play as 'V', a mercenary on the edge, whose life becomes entangled with a prototype bio-chip promising immortality. The narrative is a masterclass in cyberpunk storytelling, exploring themes of identity, consciousness, and the cost of power in a hyper-capitalist dystopia. </p>
+            <p>The writing is sharp, mature, and emotionally resonant. Characters are complex, flawed, and unforgettable, with choices that carry genuine weight and lead to drastically different outcomes. The main quest is compelling, but the side content is where the world truly comes alive. One mission might have you hunting a cyber-psychotic serial killer, while another could see you helping a sentient vending machine AI achieve its dreams. These stories, big and small, weave together to create a rich, believable, and often heartbreaking tapestry of life in the dark future.</p>
+        </section>
+        
+        <section id="performance" class="review-section">
+            <h2>Performance & Presentation: Neon Dreams and Digital Nightmares</h2>
+            <p><strong>Visually, Cybernetic Dawn is a landmark achievement.</strong> The artistry on display is breathtaking. The rain-slicked streets, towering mega-corporations, and glowing holographic advertisements create an atmosphere that is second to none. The ray-traced reflections and global illumination bring the world to life in a way that truly feels next-generation. Character models are incredibly detailed, and the sound design is impeccable—from the futuristic thrum of vehicles to the cacophony of a firefight.</p>
+            <p>However, this ambition comes at a cost. While our playthrough on a high-end PC was mostly stable, the game does suffer from occasional bugs and performance hitches. We encountered some floating objects, erratic NPC behavior, and minor quest glitches. The developers have already released several patches addressing these issues, and performance has improved significantly since launch. It's not a deal-breaker by any means, but it's a blemish on an otherwise technically astounding experience.</p>
+        </section>
+
+        <div class="verdict">
+            <h2>The Verdict</h2>
+            <div class="score">9.5 / 10</div>
+            <div class="score-text">MASTERPIECE</div>
+            <p class="summary">
+                Cybernetic Dawn is a triumph of world-building, storytelling, and player freedom. Despite minor technical blemishes, it delivers an unforgettable journey into a dark, beautiful, and thought-provoking future. It is a defining title of this generation and an essential experience for anyone who loves deep RPGs and immersive worlds. This is more than just a game; it's a glimpse into a digital ghost that will haunt you long after the credits roll.
+            </p>
+        </div>
+
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 GameSphere Reviews. All Rights Reserved. Content is for demonstrative purposes. <br> Designed by Gemini.</p>
+    </footer>
+
+</body>
+</html>
