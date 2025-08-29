@@ -32,7 +32,7 @@
         // cookieNoticePosition is now fixed to a bottom-left box, but the key is kept for compatibility
         cookieNoticePosition: 'bottom',
 
-        learnMoreLinkEnabled: false,
+        learnMoreLinkEnabled: true,
 
         learnMoreLinkHref: '/cookie-banner-information.html',
 
